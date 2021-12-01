@@ -2,6 +2,10 @@
     text-align: center;
     &__logo{
         padding: 10px;
+        & img{
+            padding-top: 10px;
+            width: 140px;
+        }
     }
     &__loc{
         display: flex;
@@ -12,8 +16,12 @@
         background: #eaeaea;
         font-weight: 500;
         // restirer les ombres des cotés                                   ???
-        box-shadow: inset 0px 2px 8px grey;
+        box-shadow: inset 0px 5px 3px #cfcfcf;
+        & i{
+            padding-left: 40px;
+        }
         & input{
+            font-weight: 500;
             border: none;
             background: inherit;
         }
@@ -30,6 +38,7 @@
         }
         & p{
             padding-bottom: 30px;
+            color: #656565;
         }
         &--explore{
             border-radius: 25px;
@@ -51,30 +60,37 @@
             font-weight: bold;
             justify-content: flex-start;
         }
-        & p{
-            position: absolute;
-            font-size: 12px;
-            border: 2px solid $primaire;
-            border-radius: 25px;
-            padding: 1px 5px;
-            background: $primaire;
-            color: #FFF;
-            margin: 0 10px;
-            left: 0;
-        }
-        & i{
-            padding: 0 15px;
-        }
-
+        
         &__lien{
             @include flex_align_row;
             @include nav_border_padding;
             background: $fond;
+            & p{
+                position: absolute;
+                font-size: 12px;
+                border: 2px solid $primaire;
+                border-radius: 25px;
+                padding: 1px 5px;
+                background: $primaire;
+                color: #FFF;
+                margin: 0 10px;
+                left: 0;
+            }
+            & i{
+                color: #888888;
+                padding: 0 15px;
+            }
+            & a{
+                font-weight: 500;
+            }
             &:hover{
                 cursor: pointer;
                 color: $primaire;
                 // on ajoute l'oppacité de 25 à la couleur 
                 background-color: #9356DC25;
+                & i{
+                    color: $primaire;
+                }
                 & a{
                     color: #000;
                 }

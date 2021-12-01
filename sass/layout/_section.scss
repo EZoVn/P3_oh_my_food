@@ -22,10 +22,18 @@ section{
         font-size: 12px;
         font-weight: 500;
         color: #008766;
-        padding: 5px;
+        padding: 5px 8px;
         border-radius: 2px;
         background: $tertiaire;
         right: 12px;
         top: 12px;
+    }
+    &__text{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        
+       
     }
 }

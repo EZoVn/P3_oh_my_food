@@ -1,0 +1,17 @@
+footer{
+    background: #353535;
+    padding: 20px;
+    color: #FFF;
+    font-size: 14px;
+    padding-bottom: 30px;
+    & img{
+        width: 90px;
+        margin-bottom: 15px;
+        filter: invert(1);
+    }
+}
+.contact p i{
+        width: 20px;
+        font-size: 10px;
+        padding-right: 10px;
+}
