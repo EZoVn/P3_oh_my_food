@@ -1,0 +1,84 @@
+.header{
+    text-align: center;
+    &__logo{
+        padding: 10px;
+    }
+    &__loc{
+        display: flex;
+        align-items: baseline;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px;
+        background: #eaeaea;
+        font-weight: 500;
+        // restirer les ombres des cotés                                   ???
+        box-shadow: inset 0px 2px 8px grey;
+        & input{
+            border: none;
+            background: inherit;
+        }
+    }
+    &__slogan{
+        background: #f6f6f6;
+        padding: 0 30px 70px;
+        margin-bottom: 50px;
+        & h2{
+            font-size: 24px;
+            padding: 30px 0 10px 0;
+            margin: 0 20px;
+            font-weight: bold;
+        }
+        & p{
+            padding-bottom: 30px;
+        }
+        &--explore{
+            border-radius: 25px;
+            padding: 15px 20px;
+            color: #FFF;
+            background: linear-gradient(to bottom right, $secondaire, $primaire);
+            box-shadow: 0px 2px 4px grey;
+        }
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        margin: 20px;
+        gap: 20px;
+        & h2{
+            margin: 0 -10px;
+            font-size: 24px;
+            font-weight: bold;
+            justify-content: flex-start;
+        }
+        & p{
+            position: absolute;
+            font-size: 12px;
+            border: 2px solid $primaire;
+            border-radius: 25px;
+            padding: 1px 5px;
+            background: $primaire;
+            color: #FFF;
+            margin: 0 10px;
+            left: 0;
+        }
+        & i{
+            padding: 0 15px;
+        }
+
+        &__lien{
+            @include flex_align_row;
+            @include nav_border_padding;
+            background: $fond;
+            &:hover{
+                cursor: pointer;
+                color: $primaire;
+                // on ajoute l'oppacité de 25 à la couleur 
+                background-color: #9356DC25;
+                & a{
+                    color: #000;
+                }
+            }
+        }
+    }
+}
