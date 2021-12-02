@@ -212,7 +212,6 @@ section {
 }
 
 footer {
-  position: inherit;
   background: #353535;
   padding: 20px;
   color: #FFF;
@@ -313,6 +312,16 @@ footer img {
 
 .menu__plat h3 {
   font-weight: bold;
+}
+
+.commander {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 30px;
 }
 
 .footer {

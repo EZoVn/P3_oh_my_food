@@ -57,6 +57,12 @@
         }
     }
 }
+// effet sur le bouton au survol
+.commander{
+        display: flex;
+        justify-content: center;
+        margin: 30px;
+}
 .footer{
     position: relative;
     top: 200px;
