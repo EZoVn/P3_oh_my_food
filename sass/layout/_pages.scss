@@ -37,6 +37,7 @@
         font-size: 26px;
     }
 }
+// ---------Affichage des menus progressif en animation                      ???
 .menu{
     & h2{
         font-size: 18px;
@@ -44,6 +45,7 @@
         text-transform: uppercase;
         margin-top: 40px;
         margin-bottom: 20px;
+        // utiliser comme span
         // marge pour reduire la bordure sous le titre
         margin-right: 290px;
         border-bottom: 3px solid $tertiaire;

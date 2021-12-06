@@ -162,6 +162,11 @@ section {
   gap: 10px;
 }
 
+section h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .card {
   position: relative;
   background: #FFF;
@@ -333,4 +338,4 @@ footer img {
   position: relative;
   top: 200px;
 }
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=styles.css.map */

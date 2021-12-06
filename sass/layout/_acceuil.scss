@@ -87,7 +87,7 @@
             &:hover{
                 cursor: pointer;
                 color: $primaire;
-                // on ajoute l'oppacité de 25 à la couleur 
+                // on ajoute l'oppacité de 25 à la couleur ou on utilise une fonction ???
                 background-color: #9356DC25;
                 & i{
                     color: $primaire;
@@ -104,6 +104,10 @@ section{
     background: $fond;
     padding: 10px;
     gap: 10px;
+    & h2{
+        font-size: 20px;
+        font-weight: bold;
+    }
 }
 .card{
     position: relative;
@@ -144,7 +148,6 @@ section{
 }
 // --------------------------------------------FOOTER---
 footer{
-    
     background: #353535;
     padding: 20px;
     color: #FFF;
