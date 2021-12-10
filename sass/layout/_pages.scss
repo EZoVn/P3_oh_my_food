@@ -9,6 +9,8 @@
         padding-top: 10px;
         width: 140px;}
 }
+// Trait sous les titres entrée plat dessert
+
 .section{
     padding: 0;
     & img{
@@ -48,7 +50,12 @@
         // utiliser comme span
         // marge pour reduire la bordure sous le titre
         margin-right: 290px;
-        border-bottom: 3px solid $tertiaire;
+        // border-bottom: 3px solid $tertiaire; 
+        & span{
+            position: absolute;
+            width: 50px;
+            border-top: 3px solid $secondaire;
+        }
     }
     &__plat{
         display: flex;
@@ -61,7 +68,21 @@
         & h3{
             font-weight: bold;
         }
+        // Pour l'animation je demarre avec une opacity de 0
+        // Je fais aparaitre chaque plat l'un apres l'autre
+        // avec ease-out je ralenti la fin de l'animation
+        opacity: 0;
+        animation: effet-menu .6s ease-out forwards;
+        @for $i from 1 to 5 {
+            &--#{$i} {
+                animation-delay: 0.3s * $i;
+            }
+        }
     }
+}
+@keyframes effet-menu{
+    from{opacity: 0;}
+    to{opacity: 1;}
 }
 // effet sur le bouton au survol
 .commander{
