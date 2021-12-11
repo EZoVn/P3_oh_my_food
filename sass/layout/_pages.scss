@@ -26,7 +26,17 @@
         padding: 20px;
         border-radius: 20px 20px 0 0;
         
+        & i{
+            // Effet non terminer je cherche encore a faire un degrader de couleur progressif      ??????
+            cursor: pointer;
+            &:active::before{
+                content: '\f004';
+                font-weight: bold;
+                color: $primaire;
+                transition: all 1s ease-in;
+            }
         }
+    }
     &__titre{
         display: flex;
         justify-content: space-between;
@@ -38,7 +48,9 @@
         font-family: 'Shrikhand', cursive;
         font-size: 26px;
     }
+    
 }
+
 // ---------Affichage des menus progressif en animation                      ???
 .menu{
     & h2{
@@ -65,12 +77,22 @@
         padding: 10px;
         border-radius: 20px;
         box-shadow: 0px 2px 4px grey;
+        &--choix{
+            // Probleme regler, est-ce que le titre doit réagir de la meme manieres ??? largeur 335px et moins impacter ???
+            // contraint de répéter le code hidden sur la box et l'élément pour que sa fonctionne
+            overflow: hidden;
+            white-space: nowrap;
+            & p{
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
         & h3{
             font-weight: bold;
         }
         // Pour l'animation je demarre avec une opacity de 0
         // Je fais aparaitre chaque plat l'un apres l'autre
-        // avec ease-out je ralenti la fin de l'animation
+        // avec ease-out je ralenti la fin de l'animation et je reste sur l'opacity finale avec forwards
         opacity: 0;
         animation: effet-menu .6s ease-out forwards;
         @for $i from 1 to 5 {
@@ -81,8 +103,8 @@
     }
 }
 @keyframes effet-menu{
-    from{opacity: 0;}
-    to{opacity: 1;}
+    50%{opacity: 0.4;}
+    100%{opacity: 1;}
 }
 // effet sur le bouton au survol
 .commander{

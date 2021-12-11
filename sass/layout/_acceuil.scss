@@ -1,4 +1,73 @@
+// ----------------------------------------------LOADER---
+// .section-loader{
+//     position: absolute;
+//     // Le loader reste au dessus du haut de ma page clic impossible                    ???
+//     height: 100%;
+//     width: 100%;
+//     top: 0;
+//     left: 0;
+//     opacity: 0;
+//     background: linear-gradient(60deg, $secondaire, $primaire);
+//     animation: fullscreen 3s;
+//     z-index: 1;
+//     // user-select: none;
+//     text-align: center;
+//     line-height: 600px;
+//     font-size: 30px;
+// }
+// .alim{
+//     position: relative;
+//     font-size: 22px;
+//     animation: grow1 .5s ease-in-out alternate;
+//     @for $i from 1 to 4 {
+//         &--#{$i} {
+//             animation-delay: 100ms * $i;
+//         }
+//     }
+// }
+.lettre{
+    display: inline-block;
+    font-weight: bold;
+    font-family: 'Shrikhand', cursive;
+    animation: grow1 1.2s ease-in-out alternate both;
+    @for $i from 0 to 8 {
+        &--#{$i} {
+            animation-delay: 200ms * $i;
+        }
+    }
+}
+@keyframes fullscreen {
+    0%{ opacity: 1;
+        position: fixed;
+        }
+    99%{opacity: 0.85;
+        position: fixed;}
+        // Comment retirer le loader de la page ???
+    // 100%{
+    //     transform: translateY(-100%);
+    // }
+    
+}
+@keyframes grow1 {
+0%{
+    transform: scale(0) translateX(0%) rotate(0deg);
+}
+95%{
+    transform: scale(1) translateX(50%) rotate(720deg);
+    color: $primaire;
+}
+100%{
+    transform: scale(1.2);
+    color: $tertiaire;
+    }
+}
+@keyframes spin{
+    
+    5%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
 // ----------------------------------------------HEADER---
+
 .header{
     text-align: center;
     &__logo{
@@ -47,8 +116,13 @@
             color: #FFF;
             background: linear-gradient(to bottom right, $secondaire, $primaire);
             box-shadow: 0px 2px 4px grey;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.5);
+            }
         }
     }
+
     .nav{
         display: flex;
         flex-direction: column;
@@ -76,6 +150,8 @@
                 color: #FFF;
                 margin: 0 10px;
                 left: 0;
+
+                transition: transform 500ms ease-in-out ;
             }
             & i{
                 color: #888888;
@@ -88,7 +164,12 @@
                 cursor: pointer;
                 color: $primaire;
                 // on ajoute l'oppacité de 25 à la couleur ou on utilise une fonction ???
-                background-color: #9356DC25;
+                // background-color: #9356DC25;
+                background-color: lighten($primaire, 30);
+                box-shadow: 2px 2px 5px grey;
+                & p{
+                    transform: scale(1.2) translateX(5px);
+                }
                 & i{
                     color: $primaire;
                 }
@@ -99,6 +180,7 @@
         }
     }
 }
+
 // ----------------------------------------SECTION---
 section{
     background: $fond;
@@ -114,6 +196,12 @@ section{
     background: #FFF;
     border-radius: 20px;
     margin: 15px 0;
+    &:hover{
+        
+        box-shadow: 2px 2px 5px grey;
+        transition: transform 0.3s ease-in-out;
+        transform: scale(1.02);
+    }
     & h2{
         font-size: 26px;
     }
@@ -133,6 +221,7 @@ section{
         background: $tertiaire;
         right: 12px;
         top: 12px;
+        
     }
     &__text{
         display: flex;
@@ -143,6 +232,14 @@ section{
             font-size: 18px;
             font-weight: bold;
         }
+        & i:hover::before{
+                content: '\f004';
+                font-weight: bold;
+                color: $primaire;
+                transition: all 1s ease-in-out;
+            }
+               
+        
         
     }
 }

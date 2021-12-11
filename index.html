@@ -9,10 +9,30 @@
     <!-- Font awesome -->
     <script src="https://kit.fontawesome.com/205d2d4b64.js" crossorigin="anonymous"></script>
 
+    <!-- MEDIA QUERIES -->
+
+
     <title>Oh My Food</title>
 </head>
 <body>
-    <div class="bloc">
+   
+
+        <!-- LOADER -->
+        <section class="section-loader">
+            <i class="alim alim--1 fas fa-utensils"></i>
+            <i class="alim alim--2 fas fa-mortar-pestle"></i>
+            <i class="alim alim--3 fas fa-wine-glass-alt"></i>
+            <span class="lettre lettre--0">Oh</span>
+            <!-- <span class="lettre lettre--1">h</span> -->
+            <span class="lettre lettre--2">My</span>
+            <!-- <span class="lettre lettre--3">y</span> -->
+            <span class="lettre lettre--4">F</span>
+            <span class="lettre lettre--5">o</span>
+            <span class="lettre lettre--6">o</span>
+            <span class="lettre lettre--7">d</span>
+        </section>
+ <div class="bloc">
+        <!-- HEADER -->
         <header class="header">
             <div class="header__logo">
                 <a href="#"><img src="assets/img/ohmyfood@2x.svg" alt="logo Oh my food"></a>
@@ -46,6 +66,7 @@
             </nav>
         </header>
         
+        <!-- SECTION -->
         <section id="restaurants">
             <h2>Restaurants</h2>
             <div class="card">
@@ -60,8 +81,8 @@
                         <!-- effet de remplissage progressif sur l'étoile                        ???-->
                         <!-- condition si clique etoile vide alors fonction remplissage du coeur
                             sinon coeur vide ??? -->
-                        <i class="fas fa-heart"></i>
-                        <i class="far fa-heart"></i>
+                        <i class="vide far fa-heart"></i>
+                        <i class="plein fas fa-heart"></i>
                     </div>
                 </a>
             </div>
@@ -75,7 +96,8 @@
                             <p>Charonne</p>
                         </div>
                         <!-- icone coeur cliquable -->
-                        <i class="far fa-heart"></i>
+
+                        <i class="heart far fa-heart"></i>
                     </div>
                 </a>
             </div>
@@ -88,7 +110,7 @@
                             <p>Cité Rouge</p> 
                         </div>
                         <!-- icone coeur cliquable -->
-                        <i class="far fa-heart"></i>
+                        <i class="heart far fa-heart"></i>
                     </div>
                 </a>
             </div>
@@ -101,13 +123,14 @@
                             <p>Folie-méricourt</p>
                         </div>
                         <!-- icone coeur cliquable -->
-                        <i class="far fa-heart"></i>
+
+                        <i class="heart far fa-heart"></i>
                     </div>
                 </a>
             </div>
-            
         </section>
-        
+
+        <!-- FOOTER -->
         <footer>
             <img src="./assets/img/ohmyfood@2x.svg" alt="logo du site en blanc">
             <div class="contact">
