@@ -1,35 +1,36 @@
 // ----------------------------------------------LOADER---
-// .section-loader{
-//     position: absolute;
-//     // Le loader reste au dessus du haut de ma page clic impossible                    ???
-//     height: 100%;
-//     width: 100%;
-//     top: 0;
-//     left: 0;
-//     opacity: 0;
-//     background: linear-gradient(60deg, $secondaire, $primaire);
-//     animation: fullscreen 3s;
-//     z-index: 1;
-//     // user-select: none;
-//     text-align: center;
-//     line-height: 600px;
-//     font-size: 30px;
-// }
-// .alim{
-//     position: relative;
-//     font-size: 22px;
-//     animation: grow1 .5s ease-in-out alternate;
-//     @for $i from 1 to 4 {
-//         &--#{$i} {
-//             animation-delay: 100ms * $i;
-//         }
-//     }
-// }
+.section-loader{
+    position: absolute;
+    // Le loader reste au dessus du haut de ma page clic impossible                    ???
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(60deg, $secondaire 30%, $primaire 70%);
+    animation: fullscreen 3s;
+// z-index pour passer au dessus de tout les elements sinon les cards avaient la priorité
+    z-index: 1;
+    text-align: center;
+    line-height: 600px;
+    font-size: 30px;
+    visibility: hidden;
+}
+.alim{
+    position: relative;
+    font-size: 22px;
+    animation: grow1 .5s ease-in-out alternate;
+    @for $i from 1 to 4 {
+        &--#{$i} {
+            animation-delay: 100ms * $i;
+        }
+    }
+}
 .lettre{
     display: inline-block;
     font-weight: bold;
     font-family: 'Shrikhand', cursive;
-    animation: grow1 1.2s ease-in-out alternate both;
+    animation: grow1 1.2s ease-in-out alternate forwards;
     @for $i from 0 to 8 {
         &--#{$i} {
             animation-delay: 200ms * $i;
@@ -39,14 +40,16 @@
 @keyframes fullscreen {
     0%{ opacity: 1;
         position: fixed;
-        }
-    99%{opacity: 0.85;
-        position: fixed;}
+        // j'ai utiliser visibility pour faire apparaitre et disparaitre le loader a la fin
+        // sinon le loader restait tapis dans l'ombre
+        visibility: visible;
+    }
+    100%{opacity: 0.95;
+        position: fixed;
+        visibility: visible;
+    }
         // Comment retirer le loader de la page ???
-    // 100%{
-    //     transform: translateY(-100%);
-    // }
-    
+   
 }
 @keyframes grow1 {
 0%{
@@ -118,7 +121,9 @@
             box-shadow: 0px 2px 4px grey;
             &:hover{
                 cursor: pointer;
-                transform: scale(1.5);
+                
+                box-shadow: 2px 2px 4px grey;
+                transform: scale(1.15);
             }
         }
     }
@@ -163,8 +168,7 @@
             &:hover{
                 cursor: pointer;
                 color: $primaire;
-                // on ajoute l'oppacité de 25 à la couleur ou on utilise une fonction ???
-                // background-color: #9356DC25;
+                
                 background-color: lighten($primaire, 30);
                 box-shadow: 2px 2px 5px grey;
                 & p{
@@ -192,15 +196,13 @@ section{
     }
 }
 .card{
-    position: relative;
     background: #FFF;
     border-radius: 20px;
     margin: 15px 0;
     &:hover{
-        
         box-shadow: 2px 2px 5px grey;
         transition: transform 0.3s ease-in-out;
-        transform: scale(1.02);
+        transform: scale(1.01);
     }
     & h2{
         font-size: 26px;
@@ -228,20 +230,46 @@ section{
         align-items: center;
         justify-content: space-between;
         padding: 10px 20px;
+        position: relative;
         & h3{
             font-size: 18px;
             font-weight: bold;
         }
-        & i:hover::before{
-                content: '\f004';
-                font-weight: bold;
-                color: $primaire;
-                transition: all 1s ease-in-out;
+        &--vide{
+            // Animation du coeur semble correct mais le hover stope si on bouge legerement la souris
+            position: relative;
+            &:hover{
+                & + .card__text--plein{
+                    animation: remplissage 1s ease-in forwards;
+                    right: 20px;
+                }
+                &::before{
+                    content: '\f004';
+                    animation: opac 950ms linear forwards;
+                }
             }
-               
-        
+        }
+        &--plein{
+            @include coeur-plein;
+        }
+    }
+}
+
+@keyframes remplissage{
+    from{
+        transform: scale(0);
+        transform-origin: center;
+        opacity: 0.2;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
         
     }
+}
+@keyframes opac {
+    from{opacity: 1;}
+    to{opacity: 0;}   
 }
 // --------------------------------------------FOOTER---
 footer{
