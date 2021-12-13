@@ -15,6 +15,11 @@ $fond: #f6f6f6;
     flex-direction: row;
     align-items: center;
 }
+@mixin flex_align_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @mixin nav_border_padding {
     box-shadow: 2px 2px 5px #e5e5e5;
     border-radius: 20px;

@@ -6,14 +6,13 @@
     width: 100%;
     top: 0;
     left: 0;
+    @include flex_align_center;
 
     background: linear-gradient(60deg, $secondaire 30%, $primaire 70%);
     animation: fullscreen 3s;
 // z-index pour passer au dessus de tout les elements sinon les cards avaient la priorité
     z-index: 1;
-    text-align: center;
-    line-height: 600px;
-    font-size: 30px;
+    font-size: 40px;
     visibility: hidden;
 }
 .alim{
@@ -42,7 +41,7 @@
         position: fixed;
         // j'ai utiliser visibility pour faire apparaitre et disparaitre le loader a la fin
         // sinon le loader restait tapis dans l'ombre
-        visibility: visible;
+        // visibility: visible;
     }
     100%{opacity: 0.95;
         position: fixed;
@@ -113,6 +112,7 @@
             padding-bottom: 30px;
             color: #656565;
         }
+        // essayer de l'isoler pour tester 
         &--explore{
             border-radius: 25px;
             padding: 15px 20px;
@@ -121,69 +121,70 @@
             box-shadow: 0px 2px 4px grey;
             &:hover{
                 cursor: pointer;
-                
                 box-shadow: 2px 2px 4px grey;
+                transition: all 1s;
                 transform: scale(1.15);
             }
         }
     }
+}
 
-    .nav{
-        display: flex;
-        flex-direction: column;
-        text-align: start;
-        margin: 20px;
-        gap: 20px;
-        & h2{
-            margin: 0 -10px;
-            font-size: 24px;
-            font-weight: bold;
-            justify-content: flex-start;
+.nav{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin: 20px;
+    gap: 20px;
+    & h2{
+        margin: 0 -10px;
+        font-size: 24px;
+        font-weight: bold;
+        justify-content: flex-start;
+    }
+    
+    &__lien{
+        @include flex_align_row;
+        @include nav_border_padding;
+        background: $fond;
+        & p{
+            position: absolute;
+            font-size: 12px;
+            border: 2px solid $primaire;
+            border-radius: 25px;
+            padding: 1px 5px;
+            background: $primaire;
+            color: #FFF;
+            margin: 0 10px;
+            left: 0;
+
+            transition: transform 500ms ease-in-out ;
         }
-        
-        &__lien{
-            @include flex_align_row;
-            @include nav_border_padding;
-            background: $fond;
+        & i{
+            color: #888888;
+            padding: 0 15px;
+        }
+        & a{
+            font-weight: 500;
+        }
+        &:hover{
+            cursor: pointer;
+            color: $primaire;
+            
+            background-color: lighten($primaire, 30);
+            box-shadow: 2px 2px 5px grey;
             & p{
-                position: absolute;
-                font-size: 12px;
-                border: 2px solid $primaire;
-                border-radius: 25px;
-                padding: 1px 5px;
-                background: $primaire;
-                color: #FFF;
-                margin: 0 10px;
-                left: 0;
-
-                transition: transform 500ms ease-in-out ;
+                transform: scale(1.2) translateX(5px);
             }
             & i{
-                color: #888888;
-                padding: 0 15px;
+                color: $primaire;
             }
             & a{
-                font-weight: 500;
-            }
-            &:hover{
-                cursor: pointer;
-                color: $primaire;
-                
-                background-color: lighten($primaire, 30);
-                box-shadow: 2px 2px 5px grey;
-                & p{
-                    transform: scale(1.2) translateX(5px);
-                }
-                & i{
-                    color: $primaire;
-                }
-                & a{
-                    color: #000;
-                }
+                color: #000;
             }
         }
     }
 }
+
 
 // ----------------------------------------SECTION---
 section{
