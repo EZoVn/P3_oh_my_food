@@ -355,6 +355,7 @@ section h2 {
 }
 
 .card {
+  position: relative;
   background: #FFF;
   border-radius: 20px;
   margin: 15px 0;
@@ -415,6 +416,7 @@ section h2 {
 }
 
 .card__text--vide {
+  cursor: pointer;
   position: relative;
 }
 
