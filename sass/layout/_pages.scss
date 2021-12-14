@@ -26,9 +26,6 @@
         background: $fond;
         padding: 20px;
         border-radius: 20px 20px 0 0;
-        // & i{
-        //     cursor: pointer;
-        // }
     }
     &__titre{
         display: flex;
@@ -84,9 +81,7 @@
                 text-overflow: ellipsis;
             }
         }
-
         &:hover{
-
             & > .menu__plat--coche{
                 
                 animation: translate 600ms linear forwards;

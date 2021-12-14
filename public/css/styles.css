@@ -767,7 +767,7 @@ footer img {
   top: 200px;
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 768px) {
   .section-loader {
     font-size: 72px;
   }
@@ -838,7 +838,153 @@ footer img {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 991px) {
+@media screen and (min-width: 1024px) {
+  .section-loader {
+    font-size: 72px;
+  }
+  .alim {
+    font-size: 36px;
+  }
+  .alim--3 {
+    padding-right: 15px;
+  }
+  .header__logo img {
+    width: 300px;
+  }
+  .header__loc i {
+    font-size: 20px;
+  }
+  .header__loc input {
+    padding: 10px;
+  }
+  .header__slogan {
+    margin-bottom: 0;
+  }
+  .header__slogan h2 {
+    font-size: 32px;
+  }
+  .header__slogan p {
+    font-size: 20px;
+  }
+  .header__slogan--explore {
+    font-size: 24px;
+  }
+  .header__slogan--explore:hover {
+    color: #301255;
+    font-weight: bold;
+    -webkit-transition: all 600ms ease-in-out;
+    transition: all 600ms ease-in-out;
+  }
+  .nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 3;
+        grid-template-columns: 3;
+    -ms-grid-rows: 2;
+        grid-template-rows: 2;
+    margin: 30px 0;
+  }
+  .nav h2 {
+    color: #292828;
+    font-size: 28px;
+    margin: auto;
+    border-bottom: 2px solid #9356DC;
+    margin-left: 35px;
+  }
+  .nav__lien {
+    -webkit-box-shadow: 2px 2px 5px #9356DC;
+            box-shadow: 2px 2px 5px #9356DC;
+    margin: 0 50px;
+    padding: 20px 30px;
+  }
+  .nav__lien--1 {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .nav__lien--2 {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .nav__lien--3 {
+    -ms-grid-column: 3;
+    grid-column: 3;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .nav__lien p {
+    font-size: 16px;
+    padding: 0px 5px;
+  }
+  .nav__lien i {
+    font-size: 22px;
+  }
+  .nav__lien a {
+    font-size: 22px;
+  }
+  #restaurants {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2;
+        grid-template-columns: 2;
+    -ms-grid-rows: 3;
+        grid-template-rows: 3;
+  }
+  #restaurants h2 {
+    border-bottom: 2px solid #9356DC;
+    font-size: 28px;
+    margin: auto;
+    margin-left: 25px;
+  }
+  .card {
+    margin: 20px 40px;
+    margin: 20px;
+  }
+  .card img {
+    height: 300px;
+  }
+  .card--1 {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .card--2 {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .card--3 {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .card--4 {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .card__text h3 {
+    font-size: 26px;
+  }
+  .card__text i {
+    font-size: 32px;
+  }
+  footer {
+    padding-bottom: 45px;
+  }
+  footer img {
+    margin: 30px 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .header-page a i {
     font-size: 22px;
     margin-top: 20px;
@@ -868,8 +1014,8 @@ footer img {
   }
   .menu__plat {
     border-radius: 20px 50px 20px 20px;
-    -webkit-animation: test-1 600ms ease-in-out forwards;
-            animation: test-1 600ms ease-in-out forwards;
+    -webkit-animation: menu 600ms ease-in-out forwards;
+            animation: menu 600ms ease-in-out forwards;
   }
   .menu__plat--1 {
     margin-right: -30px;
@@ -891,41 +1037,122 @@ footer img {
     -webkit-animation-delay: 1.2s;
             animation-delay: 1.2s;
   }
-  .menu__plat:hover > .prix {
-    -webkit-transform: translateX(-80px);
-            transform: translateX(-80px);
-    -webkit-transition: all 500ms linear;
-    transition: all 500ms linear;
-    margin-left: 100px;
+  .menu__plat:hover > .menu__plat--coche {
+    -webkit-animation: translate-2 700ms linear forwards;
+            animation: translate-2 700ms linear forwards;
   }
 }
 
-@-webkit-keyframes test-1 {
+.commander {
+  font-size: 28px;
+}
+
+@-webkit-keyframes menu {
   from {
-    -webkit-transform: translate(-10px);
-            transform: translate(-10px);
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
   }
   50% {
     opacity: 0.4;
   }
   to {
-    -webkit-transform: translate(30px);
-            transform: translate(30px);
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
     opacity: 1;
   }
 }
 
-@keyframes test-1 {
+@keyframes menu {
   from {
-    -webkit-transform: translate(-10px);
-            transform: translate(-10px);
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
   }
   50% {
     opacity: 0.4;
   }
   to {
-    -webkit-transform: translate(30px);
-            transform: translate(30px);
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes translate-2 {
+  from {
+    visibility: visible;
+    -webkit-transform: translateX(90px);
+            transform: translateX(90px);
+  }
+  to {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+    visibility: visible;
+  }
+}
+
+@keyframes translate-2 {
+  from {
+    visibility: visible;
+    -webkit-transform: translateX(90px);
+            transform: translateX(90px);
+  }
+  to {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+    visibility: visible;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .section img {
+    height: 350px;
+  }
+  .section__hors-img {
+    bottom: -300px;
+    gap: 20px;
+  }
+  .menuu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 2;
+        grid-template-rows: 2;
+    -ms-grid-columns: 3, 1fr;
+        grid-template-columns: 3, 1fr;
+    padding-right: 70px;
+  }
+  .menu {
+    margin: 20px 10px;
+  }
+  .menu__plat {
+    border-radius: 20px;
+    margin-right: 0px;
+    margin-bottom: 20px;
+    -ms-grid-column-align: left;
+        justify-self: left;
+    min-width: 30%;
+  }
+  .menu--1 {
+    min-width: 200px;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .menu--2 {
+    min-width: 200px;
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  .menu--3 {
+    min-width: 200px;
+    -ms-grid-column: 3;
+    grid-column: 3;
+  }
+  .commander {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .footer {
+    top: 300px;
   }
 }

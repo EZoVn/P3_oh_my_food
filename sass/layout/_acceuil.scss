@@ -240,7 +240,6 @@ section{
         }
         &--vide{
             cursor: pointer;
-            // Animation du coeur semble correct mais le hover stope si on bouge legerement la souris
             position: relative;
             &:hover{
                 & + .card__text--plein{

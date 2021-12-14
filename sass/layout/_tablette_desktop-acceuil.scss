@@ -1,7 +1,7 @@
 // ---------------------------------------------------------------------------------------------\\
 // ---------------------------------------VERSION TABLETTE-----------------------------------------\\
 // ---------------------------------------------------------------------------------------------\\
-@media screen and (min-width : 768px) and (max-width : 991px) {
+@media screen and (min-width : 768px)  {
     .section-loader{
         font-size: 72px;
     }
@@ -72,6 +72,133 @@
 // ---------------------------------------------------------------------------------------------\\
 // ---------------------------------------VERSION DESKTOP-----------------------------------------\\
 // ---------------------------------------------------------------------------------------------\\
-@media screen and (min-width : 992px) {
-    
+@media screen and (min-width : 1024px) {
+    .section-loader{
+        font-size: 72px;
+    }
+    .alim{
+        font-size: 36px;
+        &--3{
+            padding-right: 15px;
+        }
+    }
+    .header{
+        &__logo img{
+            width: 300px;
+        }
+        &__loc{
+            & i{
+                font-size: 20px;
+            }
+            & input{
+                padding: 10px;
+            }
+        }
+        &__slogan{
+            & h2{
+                font-size: 32px;
+            }
+            & p{
+               font-size: 20px; 
+            }
+            margin-bottom: 0;
+            &--explore{
+                font-size: 24px;
+                &:hover{
+                    // box-shadow: 2px 2px 4px black;
+                    color: darken($primaire, 40%);
+                    font-weight: bold;
+                    transition: all 600ms ease-in-out;
+                }
+            }
+        }
+    }
+   .nav{
+       display: grid;
+       grid-template-columns: 3;
+       grid-template-rows: 2;
+       margin: 30px 0;
+       & h2{
+           color: rgb(41, 40, 40);
+           font-size: 28px;
+           margin: auto;
+           border-bottom: 2px solid $primaire;
+           margin-left: 35px;
+       }
+       &__lien{
+           box-shadow: 2px 2px 5px $primaire;
+           &--1{
+               grid-column: 1;
+               grid-row: 2;
+           }
+           &--2{
+            grid-column: 2;
+            grid-row: 2;
+           }
+           &--3{
+            grid-column: 3;
+            grid-row: 2;
+           }
+           margin: 0 50px;
+           padding: 20px 30px;
+           & p{
+               font-size: 16px;
+               padding: 0px 5px;
+           }
+           & i{
+               font-size: 22px;
+           }
+           & a{
+               font-size: 22px;
+           }
+       }
+   } 
+   #restaurants{
+        & h2{
+            border-bottom: 2px solid $primaire;
+            font-size: 28px;
+            margin: auto;
+            margin-left: 25px;
+        }
+        display: grid;
+        grid-template-columns: 2;
+        grid-template-rows: 3;
+   }
+   .card{
+       margin: 20px 40px;
+       & img{
+           height: 300px;
+        }
+       &--1{
+           grid-column: 1;
+           grid-row: 2;
+       }
+       &--2{
+           grid-column: 2;
+           grid-row: 2;
+       }
+       &--3{
+           grid-column: 1;
+           grid-row: 3;
+       }
+       &--4{
+           grid-column: 2;
+           grid-row: 3;
+       }
+       margin: 20px;
+       &__text{
+           & h3{
+               font-size: 26px;
+            }
+            & i{
+                font-size: 32px;
+            }
+        } 
+    }
+    footer{
+        padding-bottom: 45px;
+        & img{
+            margin: 30px 0;
+        }
+    }
 }

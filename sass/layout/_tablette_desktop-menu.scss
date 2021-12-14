@@ -2,7 +2,7 @@
 // ---------------------------------------VERSION TABLETTE-----------------------------------------\\
 // ---------------------------------------------------------------------------------------------\\
 $marge-menu: 460px;
-@media screen and (min-width : 768px) and (max-width : 991px) {
+@media screen and (min-width : 768px){
     .header-page{
         & a i{
             font-size: 22px;
@@ -24,6 +24,8 @@ $marge-menu: 460px;
             }
         }
     }
+// }
+// @media screen and (min-width : 768px) and (max-width : 1023px){
     .menu{
         margin: 10px;
         // Je crée une marge sur chaque bloc de menu afin de réaliser un effet de decalage en escalier
@@ -34,26 +36,93 @@ $marge-menu: 460px;
         }
         &__plat{
             border-radius: 20px 50px 20px 20px;
-            animation: test-1 600ms ease-in-out forwards;
+            animation: menu 600ms ease-in-out forwards;
             @for $i from 1 to 5 {
                 &--#{$i} {
                     margin-right: -30px * $i;
                     animation-delay: 0.3s * $i;
                 }
             }
-            &:hover > .prix{
-                transform: translateX(-80px);
-                transition: all 500ms linear;
-                margin-left: 100px;
+            &:hover{
+                & > .menu__plat--coche{
+                    animation: translate-2 700ms linear forwards;
+                    
+                }
             }
         }
     }
-
-    
 }
-@keyframes test-1 {
-    from{transform: translate(-10px);}
+.commander{
+    font-size: 28px;
+}
+@keyframes menu {
+    from{transform: translateX(-10px);}
     50%{opacity: 0.4;}
-    to{transform: translate(30px);
+    to{transform: translateX(30px);
         opacity: 1;}
 }
+// J'ai réduit la translateX de 30px sinon l'effet etait trop prononcer
+@keyframes translate-2 {
+    from{
+        visibility: visible;
+        transform: translateX(90px);
+    }
+    to{
+        transform: translateX(30px);
+        visibility: visible;
+    }
+}
+// ---------------------------------------------------------------------------------------------\\
+// ---------------------------------------VERSION DESKTOP-----------------------------------------\\
+// ---------------------------------------------------------------------------------------------\\
+
+// Ne pas oublier le hover devient clic :active
+@media screen and (min-width : 1024px){
+    .section{
+        & img{
+            height: 350px;
+        }
+       
+        &__hors-img{
+            bottom: -300px;
+           
+            gap: 20px;
+        }
+        
+    }.menuu{
+        display: grid;
+        grid-template-rows: 2;
+        grid-template-columns: 3, 1fr;
+        padding-right: 70px;
+    }
+    .menu{
+        margin: 20px 10px;
+        &__plat{
+            border-radius: 20px;
+            margin-right: 0px; 
+            margin-bottom: 20px;
+            justify-self: left;
+            min-width: 30%;    
+        }
+    }
+    .menu--1{
+        min-width: 200px;
+        grid-column: 1;
+    }
+    .menu--2{
+        min-width: 200px;
+        grid-column: 2;
+    }
+    .menu--3{
+        min-width: 200px;
+        grid-column: 3;
+    }
+    .commander{
+        grid-column: 2;
+        grid-row: 3;
+    }
+    .footer{
+        top: 300px;
+    }
+}
+
