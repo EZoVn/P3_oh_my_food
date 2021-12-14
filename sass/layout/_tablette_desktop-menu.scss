@@ -90,37 +90,42 @@ $marge-menu: 460px;
         }
         
     }.menuu{
-        display: grid;
-        grid-template-rows: 2;
-        grid-template-columns: 3, 1fr;
+        // display: grid;
+        // grid-template-rows: 2;
+        // grid-template-columns: 3, 1fr;
+        // padding-right: 70px;
+
+        // Finalement j'ai utiliser display flex plutot que grid, avec une div qui englobe les 3 menus
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
         padding-right: 70px;
     }
     .menu{
-        margin: 20px 10px;
+        margin: 20px 0;
         &__plat{
             border-radius: 20px;
             margin-right: 0px; 
             margin-bottom: 20px;
             justify-self: left;
-            min-width: 30%;    
         }
     }
     .menu--1{
-        min-width: 200px;
-        grid-column: 1;
+        width: 25%;
+        // grid-column: 1;
     }
     .menu--2{
-        min-width: 200px;
-        grid-column: 2;
+        width: 25%;
+        // grid-column: 2;
     }
     .menu--3{
-        min-width: 200px;
-        grid-column: 3;
+        width: 25%;
+        // grid-column: 3;
     }
-    .commander{
-        grid-column: 2;
-        grid-row: 3;
-    }
+    // .commander{
+        // grid-column: 2;
+        // grid-row: 3;
+    // }
     .footer{
         top: 300px;
     }
