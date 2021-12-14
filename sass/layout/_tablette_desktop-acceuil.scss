@@ -1,0 +1,77 @@
+// ---------------------------------------------------------------------------------------------\\
+// ---------------------------------------VERSION TABLETTE-----------------------------------------\\
+// ---------------------------------------------------------------------------------------------\\
+@media screen and (min-width : 768px) and (max-width : 991px) {
+    .section-loader{
+        font-size: 72px;
+    }
+    .alim{
+        font-size: 36px;
+        &--3{
+            padding-right: 15px;
+        }
+    }
+    .header{
+
+        &__logo img{
+            width: 250px;
+        }
+        &__loc{
+            & i{
+                font-size: 20px;
+            }
+            & input{
+                padding: 10px;
+            }
+        }
+    }
+   .nav{
+       margin: 30px 80px;
+       &__lien{
+           margin: 0 50px;
+           padding: 20px 30px;
+           & p{
+               font-size: 16px;
+               padding: 0px 5px;
+           }
+           & i{
+               font-size: 22px;
+           }
+           & a{
+               font-size: 22px;
+           }
+       }
+   }
+   section{
+       & h2{
+           font-size: 24px;
+           margin: 0 30px;
+       }
+   }
+   .card{
+       margin: 20px;
+       &__text{
+           & h3{
+               font-size: 20px;
+           }
+           & i{
+               font-size: 26px;
+           }
+       }
+   }
+   footer img{
+        width: 150px;
+        margin: 0 0 30px 40%;
+   }
+   .contact{
+       @include flex_align_row;
+       justify-content: space-evenly;
+       font-size: 18px;
+   }
+}
+// ---------------------------------------------------------------------------------------------\\
+// ---------------------------------------VERSION DESKTOP-----------------------------------------\\
+// ---------------------------------------------------------------------------------------------\\
+@media screen and (min-width : 992px) {
+    
+}

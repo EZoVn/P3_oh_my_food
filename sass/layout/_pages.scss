@@ -1,17 +1,18 @@
 .header-page{
-    display: flex;
-    // Trouver une solution pour afficher le logo au centre et la fleche a gauche sans gap ???
-    gap: 79px;
-    align-items: center;
-    padding: 10px 25px;
-    text-align: center;
+    & a i{
+        font-size: 18px;
+        float: left;
+        margin-top: 12px;
+        margin-left: 10px;
+    }
     & img{ 
+        margin: auto;
         padding-top: 10px;
         width: 140px;}
+        text-align: center;
 }
-// Trait sous les titres entrée plat dessert
-
 .section{
+    clear: both;
     padding: 0;
     & img{
         width: 100%;
@@ -25,11 +26,9 @@
         background: $fond;
         padding: 20px;
         border-radius: 20px 20px 0 0;
-        
-        & i{
-            // Effet non terminer je cherche encore a faire un degrader de couleur progressif      ??????
-            cursor: pointer;
-        }
+        // & i{
+        //     cursor: pointer;
+        // }
     }
     &__titre{
         display: flex;
@@ -44,8 +43,6 @@
     }
     
 }
-
-// ---------Affichage des menus progressif en animation                      ???
 .menu{
     & h2{
         font-size: 18px;

@@ -146,6 +146,7 @@
         @include flex_align_row;
         @include nav_border_padding;
         background: $fond;
+        position: relative;
         & p{
             position: absolute;
             font-size: 12px;
@@ -155,7 +156,7 @@
             background: $primaire;
             color: #FFF;
             margin: 0 10px;
-            left: 0;
+            left: -20px;
 
             transition: transform 500ms ease-in-out ;
         }
