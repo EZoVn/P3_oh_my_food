@@ -37,4 +37,7 @@ $fond: #f6f6f6;
 a{
     color: inherit;
     text-decoration: none;
+    &::selection{
+        background-color: black;
+    }
 }
