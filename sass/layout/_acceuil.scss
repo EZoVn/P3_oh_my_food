@@ -1,16 +1,15 @@
-// ----------------------------------------------LOADER---
+// ---------------------------------------------------------------------------------------------\\
+// ---------------------------------------LOADER-----------------------------------------\\
+// ---------------------------------------------------------------------------------------------\\
 .section-loader{
     position: absolute;
-    // Le loader reste au dessus du haut de ma page clic impossible                    ???
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     @include flex_align_center;
-
     background: linear-gradient(60deg, $secondaire 30%, $primaire 70%);
     animation: fullscreen 3s;
-// z-index pour passer au dessus de tout les elements sinon les cards avaient la priorité
     z-index: 1;
     font-size: 40px;
     visibility: hidden;
@@ -24,6 +23,9 @@
             animation-delay: 100ms * $i;
         }
     }
+    &--3{
+        padding-right: 15px;
+    }
 }
 .lettre{
     display: inline-block;
@@ -35,41 +37,13 @@
             animation-delay: 200ms * $i;
         }
     }
-}
-@keyframes fullscreen {
-    0%{ opacity: 1;
-        position: fixed;
-        // j'ai utiliser visibility pour faire apparaitre et disparaitre le loader a la fin
-        // sinon le loader restait tapis dans l'ombre
-        // visibility: visible;
-    }
-    100%{opacity: 0.95;
-        position: fixed;
-        visibility: visible;
-    }
-        // Comment retirer le loader de la page ???
-   
-}
-@keyframes grow1 {
-0%{
-    transform: scale(0) translateX(0%) rotate(0deg);
-}
-95%{
-    transform: scale(1) translateX(50%) rotate(720deg);
-    color: $primaire;
-}
-100%{
-    transform: scale(1.2);
-    color: $tertiaire;
+    &--0, &--2{
+        padding-right: 15px;
     }
 }
-@keyframes spin{
-    
-    5%{transform: rotate(0deg);}
-    100%{transform: rotate(360deg);}
-}
-// ----------------------------------------------HEADER---
-
+// ---------------------------------------------------------------------------------------------\\
+// ---------------------------------------HEADER-----------------------------------------\\
+// ---------------------------------------------------------------------------------------------\\
 .header{
     text-align: center;
     &__logo{
@@ -87,7 +61,6 @@
         padding: 20px;
         background: #eaeaea;
         font-weight: 500;
-        // restirer les ombres des cotés                                   ???
         box-shadow: inset 0px 5px 3px #cfcfcf;
         & i{
             padding-left: 40px;
@@ -112,7 +85,6 @@
             padding-bottom: 30px;
             color: #656565;
         }
-        // essayer de l'isoler pour tester 
         &--explore{
             border-radius: 25px;
             padding: 15px 20px;
@@ -128,7 +100,9 @@
         }
     }
 }
-
+// ---------------------------------------------------------------------------------------------\\
+// ---------------------------------------MENU NAVIGATION-----------------------------------------\\
+// ---------------------------------------------------------------------------------------------\\
 .nav{
     display: flex;
     flex-direction: column;
@@ -141,7 +115,6 @@
         font-weight: bold;
         justify-content: flex-start;
     }
-    
     &__lien{
         @include flex_align_row;
         @include nav_border_padding;
@@ -170,7 +143,6 @@
         &:hover{
             cursor: pointer;
             color: $primaire;
-            
             background-color: lighten($primaire, 30);
             box-shadow: 2px 2px 5px grey;
             & p{
@@ -185,9 +157,9 @@
         }
     }
 }
-
-
-// ----------------------------------------SECTION---
+// ---------------------------------------------------------------------------------------------\\
+// ---------------------------------------SECTION-----------------------------------------\\
+// ---------------------------------------------------------------------------------------------\\
 section{
     background: $fond;
     padding: 10px;
@@ -257,24 +229,9 @@ section{
         }
     }
 }
-
-@keyframes remplissage{
-    from{
-        transform: scale(0);
-        transform-origin: center;
-        opacity: 0.2;
-    }
-    to{
-        transform: scale(1);
-        opacity: 1;
-        
-    }
-}
-@keyframes opac {
-    from{opacity: 1;}
-    to{opacity: 0;}   
-}
-// --------------------------------------------FOOTER---
+// ---------------------------------------------------------------------------------------------\\
+// ---------------------------------------FOOTER-----------------------------------------\\
+// ---------------------------------------------------------------------------------------------\\
 footer{
     background: #353535;
     padding: 20px;

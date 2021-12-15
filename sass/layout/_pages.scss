@@ -1,3 +1,6 @@
+// ---------------------------------------------------------------------------------------------\\
+// ---------------------------------------HEADER-PAGE-----------------------------------------\\
+// ---------------------------------------------------------------------------------------------\\
 .header-page{
     & a i{
         font-size: 18px;
@@ -11,6 +14,9 @@
         width: 140px;}
         text-align: center;
 }
+// ---------------------------------------------------------------------------------------------\\
+// ---------------------------------------SECTION-PAGE-----------------------------------------\\
+// ---------------------------------------------------------------------------------------------\\
 .section{
     clear: both;
     padding: 0;
@@ -38,7 +44,6 @@
         font-family: 'Shrikhand', cursive;
         font-size: 26px;
     }
-    
 }
 .menu{
     & h2{
@@ -47,10 +52,8 @@
         text-transform: uppercase;
         margin-top: 40px;
         margin-bottom: 20px;
-        // utiliser comme span
-        // marge pour reduire la bordure sous le titre
+
         margin-right: 290px;
-        // border-bottom: 3px solid $tertiaire; 
         & span{
             position: absolute;
             width: 50px;
@@ -92,7 +95,6 @@
             & > .prix{
                 transform: translateX(-50px);
                 transition: all 600ms linear;
-                // margin left permet de decaler ma marge avec la transition pour reduir le texte
                 margin-left: 50px;
             } 
         }
@@ -123,36 +125,14 @@
         }
     }
 }
-@keyframes translate {
-    from{
-        visibility: visible;
-        transform: translateX(60px);
-    }
-    to{
-        transform: translateX(0px);
-        visibility: visible;
-    }
-}
-@keyframes plat {
-    from{
-        transform: rotate(0deg);
-    }
-    to{
-    visibility: visible;
-    transform: rotate(360deg);
-    }
-}
-@keyframes effet-menu{
-    50%{opacity: 0.4;}
-    100%{opacity: 1;}
-}
-// effet sur le bouton au survol
 .commander{
         display: flex;
         justify-content: center;
         margin: 30px;
 }
-// permet de retrouver l'espace perdu par la section qui deborde sur l'image
+// ---------------------------------------------------------------------------------------------\\
+// ---------------------------------------FOOTER-PAGE-----------------------------------------\\
+// ---------------------------------------------------------------------------------------------\\
 .footer{
     position: relative;
     top: 200px;

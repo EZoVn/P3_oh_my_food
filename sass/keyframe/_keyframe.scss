@@ -1,0 +1,95 @@
+// ---------------------------------------------------------------------------------------------\\
+// ---------------------------------------KEYFRAME-LOADER-----------------------------------------\\
+// ---------------------------------------------------------------------------------------------\\
+@keyframes fullscreen {
+    0%{ opacity: 1;
+        position: fixed;
+    }
+    100%{opacity: 0.95;
+        position: fixed;
+        visibility: visible;
+    }   
+}
+@keyframes grow1 {
+0%{
+    transform: scale(0) translateX(0%) rotate(0deg);
+}
+95%{
+    transform: scale(1) translateX(50%) rotate(720deg);
+    color: $primaire;
+}
+100%{
+    transform: scale(1.2);
+    color: $tertiaire;
+    }
+}
+@keyframes spin{
+    
+    5%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+// ---------------------------------------------------------------------------------------------\\
+// ---------------------------------------KEYFRAME-COEUR-----------------------------------------\\
+// ---------------------------------------------------------------------------------------------\\
+@keyframes remplissage{
+    from{
+        transform: scale(0);
+        transform-origin: center;
+        opacity: 0.2;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+        
+    }
+}
+@keyframes opac {
+    from{opacity: 1;}
+    to{opacity: 0;}   
+}
+// ---------------------------------------------------------------------------------------------\\
+// ---------------------------------------KEYFRAMES-PAGE-----------------------------------------\\
+// ---------------------------------------------------------------------------------------------\\
+@keyframes translate {
+    from{
+        visibility: visible;
+        transform: translateX(60px);
+    }
+    to{
+        transform: translateX(0px);
+        visibility: visible;
+    }
+}
+@keyframes plat {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+    visibility: visible;
+    transform: rotate(360deg);
+    }
+}
+@keyframes effet-menu{
+    50%{opacity: 0.4;}
+    100%{opacity: 1;}
+}
+// ---------------------------------------------------------------------------------------------\\
+// ---------------------------------------KEYFRAME-TABLETTE-DESKTOP----------------------------------------\\
+// ---------------------------------------------------------------------------------------------\\
+@keyframes menu {
+    from{transform: translateX(-10px);}
+    50%{opacity: 0.4;}
+    to{transform: translateX(30px);
+        opacity: 1;}
+}
+// J'ai réduit la translateX de 30px sinon l'effet etait trop prononcer
+@keyframes translate-2 {
+    from{
+        visibility: visible;
+        transform: translateX(90px);
+    }
+    to{
+        transform: translateX(30px);
+        visibility: visible;
+    }
+}

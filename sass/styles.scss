@@ -9,5 +9,7 @@
 @import "./layout/acceuil";
 @import "./layout/pages";
 // Media queries
-@import "./layout/tablette_desktop-acceuil";
-@import "./layout/tablette_desktop-menu";
+@import "./media-queries/tablette_desktop-acceuil";
+@import "./media-queries/tablette_desktop-menu";
+// Keyframe
+@import "./keyframe/keyframe";

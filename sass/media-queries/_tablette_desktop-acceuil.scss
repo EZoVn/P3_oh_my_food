@@ -7,9 +7,6 @@
     }
     .alim{
         font-size: 36px;
-        &--3{
-            padding-right: 15px;
-        }
     }
     .header{
 
@@ -105,7 +102,6 @@
             &--explore{
                 font-size: 24px;
                 &:hover{
-                    // box-shadow: 2px 2px 4px black;
                     color: darken($primaire, 40%);
                     font-weight: bold;
                     transition: all 600ms ease-in-out;
